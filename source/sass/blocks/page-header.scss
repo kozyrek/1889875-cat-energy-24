@@ -1,7 +1,10 @@
+.page-header {
+  position: relative;
+}
+
 .page-header__container {
   display: flex;
   justify-content: space-between;
-  position: relative;
 }
 
 .page-header__logo-wrapper {

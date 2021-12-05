@@ -1,0 +1,20 @@
+.range-slider {
+  width: 85.6px;
+  height: 14px;
+  background-color: $white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  position: relative;
+}
+
+.range-slider__button {
+  position: absolute;
+  width: 35.7px;
+  height: 6px;
+  top: 3px;
+  left: 5.1px;
+  background-color: $green;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
