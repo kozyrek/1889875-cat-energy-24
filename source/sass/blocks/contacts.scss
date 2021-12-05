@@ -1,0 +1,25 @@
+.contacts--back {
+  background-color: #f2f2f2;
+}
+
+.contacts__address {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.contacts__title {
+  margin: 0;
+  min-width: 139px;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  margin: 0;
+}
+
+.contacts__map {
+  iframe {
+    display: block;
+  }
+}

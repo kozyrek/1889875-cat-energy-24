@@ -1,0 +1,19 @@
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.page-header__logo-wrapper {
+  padding-bottom: 7.4px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.page-header__logo {
+  margin-right: 57px;
+}
+
+.page-header__logo + .page-header__logo {
+  margin-bottom: 6.6px;
+}

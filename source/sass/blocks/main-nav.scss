@@ -1,0 +1,33 @@
+.main-nav {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  z-index: 2;
+}
+
+.main-nav__toggle {
+  margin: 20px 18px 20px 276px;
+  width: 24px;
+  height: 24px;
+  background-image: url("../../img/background/icon-close.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav__list {
+  background-color: $white;
+  // display: none;
+}
+
+.main-nav__link {
+  display: block;
+  padding: 22px 22px 24px;
+}
