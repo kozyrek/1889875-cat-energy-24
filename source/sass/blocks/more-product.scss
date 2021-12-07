@@ -1,0 +1,72 @@
+.more-product {
+  padding-top: 25px;
+}
+
+.more-product__list {
+  margin-bottom: 35px;
+}
+
+.more-product__item {
+  padding: 13px 0 19px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.more-product__title {
+  margin: 0 0 36px;
+}
+
+.more-product__link {
+  margin: 0 0 13px;
+  width: 100%;
+}
+
+.more-product__subtitle {
+  margin: 0;
+}
+
+.more-product__text {
+  margin-bottom: 15px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.more-product__text + .more-product__text {
+  margin-left: auto;
+}
+
+.more-product__gift {
+  margin-bottom: 25px;
+  padding: 187px 61px 43px 58px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background/cat-bag.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  p {
+    margin: 0;
+    width: 161px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 59px;
+    left: calc(50% - 39px);
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/background/icon-gift.svg");
+  }
+}

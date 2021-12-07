@@ -1,0 +1,31 @@
+.product__item {
+  padding: 19px 0 25px;
+}
+
+.product__item--more {
+  padding-top: 78px;
+}
+
+.product__item-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.product__description {
+  margin-bottom: 22px;
+}
+
+.product__link {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.product__title {
+  margin: 0;
+  width: 100px;
+}
+
+.product__table-item {
+  display: flex;
+  justify-content: space-between;
+}

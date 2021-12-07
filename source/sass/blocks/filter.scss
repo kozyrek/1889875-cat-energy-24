@@ -1,0 +1,208 @@
+.filter__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__container {
+  display: grid;
+  row-gap: 24px;
+  margin-bottom: 26px;
+}
+
+.filter__user-data-list {
+  display: grid;
+  row-gap: 14px;
+}
+
+.filter__user-data-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter__user-data-label {
+  @include label();
+  color: #444444;
+}
+
+.filter__user-data-input {
+  padding: 12.5px 0;
+  padding-left: 15px;
+  border: 1px solid #e7e7e7;
+
+  @include input;
+}
+
+.filter__program-diet {
+  padding-top: 22px;
+  padding-bottom: 19px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.filter__program-diet-list {
+  display: grid;
+  row-gap: 12.5px;
+}
+
+.filter__program-diet-item {
+  margin: 0;
+  padding: 3px 0;
+  padding-left: 46px;
+  min-height: 30px;
+  position: relative;
+}
+
+.filter__program-diet-label {
+  @include label();
+  color: #222222;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.filter__program-diet-input:checked + .filter__program-diet-label::after {
+  position: absolute;
+  content: "";
+  width: 13.5px;
+  height: 13.55px;
+  top: 8.23px;
+  left: 8.3px;
+  background-color: $green;
+  border-radius: 50%;
+}
+
+.filter__user-contacts {
+  margin-bottom: 23.6px;
+}
+
+.filter__user-contacts-title {
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.filter__user-contacts-list {
+  display: grid;
+  row-gap: 14px;
+}
+
+.filter__user-contacts-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.filter__user-contacts-label {
+  @include label();
+
+  color: #444444;
+}
+
+.filter__user-contacts-label-icon-email {
+  position: absolute;
+  top: 16.8px;
+  right: 16px;
+}
+
+.filter__user-contacts-label-icon-tel {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+
+.filter__user-contacts-input[type="email"] {
+  margin-left: 16px;
+  padding: 11.5px 0 13.5px;
+  padding-left: 15px;
+  border: 1px solid #cdcdcd;
+
+  @include input();
+}
+
+.filter__user-contacts-input[type="tel"] {
+  margin-left: 13px;
+  padding: 11.5px 0 13.5px;
+  padding-left: 16px;
+  border: 1px solid #cdcdcd;
+
+  @include input();
+}
+
+.filter__comment {
+  margin-bottom: 17.8px;
+}
+
+.filter__comment-title {
+  margin-bottom: 37.7px;
+  padding: 0;
+}
+
+.filter__comment-text {
+  padding: 9.3px 12px 14px 15px;
+  width: 100%;
+  resize: none;
+  border: 1px solid #e7e7e7;
+}
+
+.filter__other-products {
+  margin-bottom: 34px;
+}
+
+.filter__other-products-title {
+  margin-bottom: 34px;
+  padding: 0;
+}
+
+.filter__other-products-list {
+  display: grid;
+  row-gap: 12px;
+}
+
+.filter__other-products-item {
+  padding: 3px 6px 3px 46px;
+  position: relative;
+}
+
+.filter__other-products-label {
+  @include label;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.filter__other-products-input:checked + .filter__other-products-label::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 14px;
+  top: 8px;
+  left: 6.3px;
+  background-image: url("../../img/background/icon-tick.svg");
+}
+
+.filter__button {
+  margin-bottom: 21px;
+}
+
+.filter__text {
+  margin: 0;
+  text-align: center;
+}

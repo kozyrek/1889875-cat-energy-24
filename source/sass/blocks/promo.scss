@@ -1,0 +1,39 @@
+.promo {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.promo__description {
+  padding: 27px 20px 135px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background/cat-promo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.promo__title {
+  margin: 0 0 25px;
+}
+
+.promo__text {
+  margin: 0 0 29px;
+  font-size: 14px;
+  line-height: 14px;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.promo__link {
+  padding: 11px 0;
+  position: absolute;
+  width: auto;
+  right: 20px;
+  bottom: 10px;
+  left: 20px;
+}
+
+.promo__container {
+  margin-top: -135px;
+  padding-bottom: 43px;
+}

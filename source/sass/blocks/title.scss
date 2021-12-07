@@ -1,0 +1,52 @@
+.title {
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.title--white {
+  color: $white;
+  text-align: center;
+}
+
+.title--height {
+  line-height: 40px;
+}
+
+.title--subtitle {
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.title--subtitle-color {
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+}
+
+.title--subtitle-height {
+  font-size: 16px;
+  line-height: 16px;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.title--size {
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+}
+
+.title--title-size {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.title--form-size {
+  font-size: 24px;
+  line-height: 26px;
+}

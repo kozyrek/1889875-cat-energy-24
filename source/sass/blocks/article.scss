@@ -1,0 +1,29 @@
+.article {
+  padding-top: 10px;
+  padding-bottom: 39px;
+}
+
+.article__title {
+  margin: 0 0 40px;
+}
+
+.article__list {
+  display: grid;
+  row-gap: 20px;
+}
+
+.article__item {
+  padding: 2px 0 0 80px;
+  min-height: 60px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: $green;
+  }
+}
