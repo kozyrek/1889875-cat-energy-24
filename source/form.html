@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="page-header wrapper">
+    <header class="page-header page-header--container wrapper">
       <div class="page-header__logo-wrapper">
         <a class="page-header__logo" href="index.html">
           <img src="img/logo/logo-image.svg" width="33" height="37" alt="Логотип магазина функционального питания Кэт энерджи">
@@ -78,7 +78,7 @@
             <legend class="filter__user-contacts-title title title--form-size">Контактные данные (владельца кота)</legend>
             <ul class="filter__user-contacts-list list-reset">
               <li class="filter__user-contacts-item">
-                <label class="filter__user-contacts-label filter__user-contacts-label--email" id="email">E-mail:⃰
+                <label class="filter__user-contacts-label filter__user-contacts-label--email" for="email">E-mail:⃰
                   <svg class="filter__user-contacts-label-icon-email" aria-hidden="true" focusable="false" viewBox="0 0 20 15" width="20" height="15" stroke="#222222" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-width="1.3" d="M1.65 5.85v8M18.65 5.85v8M1 13.2h18M1 1.2h18M18.35 3.03 10 9.53l-8.35-6.5V1.5h16.7v1.53Z"/>
                   </svg>
@@ -86,7 +86,7 @@
                 <input class="filter__user-contacts-input" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" value="kuklachev@gmail.com" required>
               </li>
               <li class="filter__user-contacts-item">
-                <label class="filter__user-contacts-label filter__user-contacts-label--tel" id="tel">Телефон:⃰
+                <label class="filter__user-contacts-label filter__user-contacts-label--tel" for="tel">Телефон:⃰
                   <svg class="filter__user-contacts-label-icon-tel" aria-hidden="true" focusable="false" viewBox="0 0 20 21" width="20" height="21" fill="#000000" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#a)">
                       <path d="M17.9 9.75H9.4v1.2h8.5l-2.1 2.11.9.9 3.1-3.1a.75.75 0 0 0 0-.9l-3.1-3.12-.9.9 2.1 2.01ZM8.1 19.79v-6.22a.65.65 0 0 0-.6-.6H3.1a1.23 1.23 0 0 0 1.2 1.2h2.5v5.02H3.1a1.78 1.78 0 0 1-1.9-1.71V3.43a1.78 1.78 0 0 1 1.7-1.8h3.9v5.01H4.4a1.22 1.22 0 0 0-1.2 1.2h4.4a.65.65 0 0 0 .6-.6V.92a.86.86 0 0 0-.7-.6H3.1A3 3 0 0 0 0 3.23v13.95a2.9 2.9 0 0 0 2.9 3.1h4.6a.5.5 0 0 0 .6-.5Z"/>
@@ -138,7 +138,7 @@
       <section class="contacts contacts--back">
         <div class="wrapper">
           <div class="contacts__address">
-            <h2 class="contacts__title title title--size">Приглашаем к сотрудничеству дилеров!</h2>
+            <h2 class="contacts__title title title--size">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             <p class="contacts__text text text--height">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
         </div>
@@ -181,5 +181,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
