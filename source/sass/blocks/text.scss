@@ -4,6 +4,11 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .text--size {
@@ -37,4 +42,10 @@
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.text--color {
+  @media (min-width: $tablet-width) {
+    color: #000000;
+  }
 }

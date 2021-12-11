@@ -4,6 +4,20 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $white;
+  }
 }
 
 .main-nav__toggle {
@@ -15,6 +29,10 @@
   background-position-y: 4px;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width), (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -22,18 +40,45 @@
   min-width: 320px;
   top: 64px;
   left: 0;
+  right: 0;
   z-index: 1;
   background-color: $white;
   display: none;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    z-index: 0;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 580px;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: $tablet-width) {
+    margin-left: 34px;
+  }
 }
 
 .main-nav__link {
   display: block;
   padding: 22px 22px 24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0;
+  }
 }
 
 .main-nav.active .main-nav__list {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .main-nav.active .main-nav__toggle {

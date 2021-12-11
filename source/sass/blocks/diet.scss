@@ -1,14 +1,32 @@
 .diet {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+    padding-top: 29px;
+  }
 }
 
 .diet__list {
   display: grid;
   row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
 }
 
 .diet__item {
-  padding: 21px 33px 18px 20px;
+  padding: 30px 33px 18px 20px;
   background-color: #f2f2f2;
   position: relative;
 
@@ -22,18 +40,63 @@
     left: 22px;
     background-color: $green;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 316px 53px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 52px 55px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .diet__item::before {
+    width: 200px;
+    height: 200px;
+    top: 92px;
+    left: auto;
+    right: 62px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .diet__item::before {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    left: 52px;
+  }
 }
 
 .diet__title {
-  margin: 9px 9px 29px 71px;
+  margin: 0 9px 29px 71px;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 24px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 9px 73px 162px;
+  }
 }
 
 .diet__text {
-  margin-bottom: 38px;
+  margin: 0 0 38px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 23px;
+  }
 }
 
 .diet__link {
@@ -43,4 +106,9 @@
   line-height: 16px;
   color: #000000;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

@@ -1,15 +1,22 @@
 .range-slider {
-  width: 85.6px;
+  width: 30.7%;
   height: 14px;
   background-color: $white;
   border: 1px solid #cdcdcd;
   border-radius: 6px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 426px;
+    height: 6px;
+    background-color: #dcdcdc;
+    border: none;
+  }
 }
 
 .range-slider__button {
   position: absolute;
-  width: 35.7px;
+  width: calc((100% - 16px) / 2);
   height: 6px;
   top: 3px;
   left: 5.1px;
@@ -17,4 +24,26 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 34px;
+    top: -14px;
+    left: 196px;
+    background-color: $white;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      top: calc(50% - 4px);
+      left: calc(50% - 4px);
+      background-color: $green;
+      border-radius: 50%;
+    }
+  }
 }

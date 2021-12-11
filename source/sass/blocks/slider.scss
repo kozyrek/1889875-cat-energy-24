@@ -11,4 +11,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 23px;
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration: underline dotted rgba(0, 0, 0, 0.24) 1px;
+    text-underline-offset: 6px;
+  }
 }

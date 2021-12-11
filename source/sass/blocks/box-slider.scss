@@ -2,8 +2,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 28px;
+  }
+}
+
+
+.box-slider__list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.box-slider__item {
+  @media (min-width: $tablet-width) {
+    width: 296px;
+    height: 511px;
+  }
+}
+
+.box-slider__image {
+  width: 100%;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 100%;
+    object-position: left;
+  }
+}
+
+.box-slider__item-after .box-slider__image {
+  @media (min-width: $tablet-width) {
+    object-position: right;
+  }
 }
 
 .box-slider__item-after {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
