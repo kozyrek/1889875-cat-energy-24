@@ -1,6 +1,7 @@
 .page-body {
   margin: 0 auto;
-  width: 320px;
+  width: 100%;
+  min-width: 320px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,6 +9,14 @@
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: $desktop-width;
+  }
 }
 // класс для реализации работы меню без использования js
 .page-body--no-js {

@@ -1,5 +1,12 @@
 .page-header {
   position: relative;
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to right, $white 50%, rgba(104, 183, 56, 0.85) 50%), url("../../img/background/cat-promo-desktop.jpg"), linear-gradient(to right, $white 50%, #535259 50%);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
 }
 
 .page-header--container {
@@ -10,18 +17,54 @@
 .page-header__container {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 186px 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 220px 1fr;
+  }
 }
 
 .page-header__logo-wrapper {
   padding-bottom: 7.4px;
   display: flex;
   align-items: flex-end;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    align-items: center;
+  }
+}
+
+.page-header__navigation {
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+  }
 }
 
 .page-header__logo {
   margin-right: 57px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 12px;
+  }
 }
 
 .page-header__logo + .page-header__logo {
   margin-bottom: 6.6px;
+}
+
+.page-header__promo {
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 17px 117px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 3px 190px 54px;
+  }
 }

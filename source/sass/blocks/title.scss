@@ -4,15 +4,29 @@
   font-size: 36px;
   line-height: 36px;
   color: #000000;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
-.title--white {
+.title--color {
   color: $white;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    color: #000000;
+    text-align: left;
+  }
 }
 
 .title--height {
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 60px;
+  }
 }
 
 .title--subtitle {
@@ -39,6 +53,11 @@
   font-size: 16px;
   line-height: 20px;
   color: #111111;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .title--title-size {
