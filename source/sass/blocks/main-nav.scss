@@ -16,14 +16,13 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: $white;
   }
 }
 
 .main-nav__toggle {
   width: 24px;
   height: 24px;
-  background-image: url("../../img/background/icon-open.svg");
+  background-image: url("../img/background/icon-open.svg");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position-y: 4px;
@@ -67,9 +66,20 @@
 .main-nav__link {
   display: block;
   padding: 22px 22px 24px;
+  color: #000000;
 
   @media (min-width: $tablet-width) {
     padding: 10px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: #111111;
+  }
+}
+
+.main-nav__link--color {
+  @media (min-width: $desktop-width) {
+    color: $white;
   }
 }
 
@@ -82,5 +92,5 @@
 }
 
 .main-nav.active .main-nav__toggle {
-  background-image: url("../../img/background/icon-close.svg");
+  background-image: url("../img/background/icon-close.svg");
 }

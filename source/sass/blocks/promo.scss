@@ -8,7 +8,7 @@
 
 .promo__description {
   padding: 27px 20px 135px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background/cat-promo.jpg"), linear-gradient(#4f4f53, #403f43);
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-promo.jpg"), linear-gradient(#4f4f53, #403f43);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
@@ -45,7 +45,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 49px;
+    margin-bottom: 48px;
     font-size: 20px;
     line-height: 20px;
     text-align: left;

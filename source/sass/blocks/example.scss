@@ -3,7 +3,7 @@
   background-color: #eaeaea;
 
   @media (min-width: $tablet-width) {
-    padding: 43px 30px 52px;
+    padding: 43px 30px 55px;
     position: relative;
 
     &::before {
@@ -18,7 +18,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px 71px;
+    padding: 0 110px 65px;
     display: flex;
     justify-content: space-between;
     background-color: #f2f2f2;
@@ -64,7 +64,7 @@
 
 .example__item {
   position: relative;
-  padding: 14.5px 0 17.5px;
+  padding: 13.5px 0 16.5px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
 
@@ -84,7 +84,7 @@
 
   @media (min-width: $tablet-width) {
     width: 162px;
-    padding: 15px 0 20px;
+    padding: 14px 0 19px;
   }
 }
 
@@ -104,13 +104,14 @@
   margin: 0 0 20px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 54px;
+    margin: 0 0 53px;
     padding-right: 15px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 436px;
     margin: 0 0 69px;
+    padding: 0;
   }
 }
 
@@ -136,7 +137,7 @@
   text-align: center;
   color: #444444;
   position: absolute;
-  top: 47px;
+  top: 45px;
   left: 20%;
   right: 20%;
 
@@ -145,7 +146,7 @@
     font-size: 14px;
     line-height: 14px;
     background-color: $white;
-    top: 65px;
+    top: 62px;
     left: 24px;
   }
 
