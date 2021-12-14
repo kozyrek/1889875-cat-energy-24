@@ -7,44 +7,82 @@
 .filter__container {
   display: grid;
   row-gap: 24px;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 72px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 69px;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .filter__user-data-list {
   display: grid;
   row-gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+  }
 }
 
 .filter__user-data-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 12px;
+  gap: 16px;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    gap: 21px;
+  }
 }
 
 .filter__user-data-label {
   @include label();
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .filter__user-data-input {
   padding: 12.5px 0;
-  padding-left: 15px;
+  padding-left: 16px;
   border: 1px solid #e7e7e7;
 
   @include input;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 0;
+    padding-left: 18px;
+  }
 }
 
 .filter__program-diet {
   padding-top: 22px;
   padding-bottom: 19px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 27px;
+    border: 1px solid #e7e7e7;
+  }
 }
 
 .filter__program-diet-list {
   display: grid;
   row-gap: 12.5px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 13px;
+  }
 }
 
 .filter__program-diet-item {
@@ -53,6 +91,15 @@
   padding-left: 46px;
   min-height: 30px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 7px 0 3px 60px;
+  }
 }
 
 .filter__program-diet-label {
@@ -68,6 +115,16 @@
     border-radius: 50%;
     top: 0;
     left: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -80,20 +137,48 @@
   left: 8.3px;
   background-color: $green;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
 }
 
 .filter__user-contacts {
   margin-bottom: 23.6px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
+  }
 }
 
 .filter__user-contacts-title {
   padding: 0;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .filter__user-contacts-list {
   display: grid;
   row-gap: 14px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+  }
 }
 
 .filter__user-contacts-item {
@@ -107,6 +192,11 @@
   @include label();
 
   color: #444444;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .filter__user-contacts-label-icon-email {
@@ -122,56 +212,119 @@
 }
 
 .filter__user-contacts-input[type="email"] {
-  margin-left: 16px;
+  margin-left: 13px;
   padding: 11.5px 0 13.5px;
   padding-left: 15px;
   border: 1px solid #cdcdcd;
 
   @include input();
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 22px;
+    padding: 10px 0;
+    padding-left: 20px;
+  }
 }
 
 .filter__user-contacts-input[type="tel"] {
-  margin-left: 13px;
+  margin-left: 10px;
   padding: 11.5px 0 13.5px;
   padding-left: 16px;
   border: 1px solid #cdcdcd;
 
   @include input();
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 17px;
+    padding: 10px 0;
+    padding-left: 19px;
+  }
 }
 
 .filter__comment {
   margin-bottom: 17.8px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
+  }
 }
 
 .filter__comment-title {
   margin-bottom: 37.7px;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .filter__comment-text {
-  padding: 9.3px 12px 14px 15px;
+  padding: 9px 12px 14px 14px;
   width: 100%;
   resize: none;
   border: 1px solid #e7e7e7;
+
+  @media (min-width: $tablet-width) {
+    height: 174px;
+    padding-left: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 12px 12px 14px 19px;
+  }
 }
 
 .filter__other-products {
-  margin-bottom: 34px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 61px;
+  }
 }
 
 .filter__other-products-title {
   margin-bottom: 34px;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+  }
 }
 
 .filter__other-products-list {
   display: grid;
   row-gap: 12px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 81px;
+  }
 }
 
 .filter__other-products-item {
   padding: 3px 6px 3px 46px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 6px 5px 59px;
+  }
 }
 
 .filter__other-products-label {
@@ -185,6 +338,16 @@
     top: 0;
     left: 0;
     border: 1px solid #cdcdcd;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -195,14 +358,35 @@
   height: 14px;
   top: 8px;
   left: 6.3px;
-  background-image: url("../../img/background/icon-tick.svg");
+  background-image: url("../img/background/icon-tick.svg");
 }
 
 .filter__button {
-  margin-bottom: 21px;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .filter__text {
   margin: 0;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    justify-self: flex-start;
+    align-self: center;
+  }
+}
+
+.filter__box {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 81px;
+  }
 }

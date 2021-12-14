@@ -21,7 +21,7 @@
     position: absolute;
     top: 95px;
     left: 110px;
-    padding: 56px 80px 60px;
+    padding: 55px 77px 58px 80px;
     min-width: 565px;
     background-color: $white;
   }
@@ -33,7 +33,12 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    padding-top: 4px;
     max-width: 180px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 4px;
   }
 }
 
@@ -43,7 +48,11 @@
 
   @media (min-width: $tablet-width) {
     width: 160px;
-    text-align: end;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 

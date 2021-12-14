@@ -2,6 +2,10 @@
   margin: 0 0 8px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 23px;
+  }
 }
 
 .item-show-more__text {
@@ -12,4 +16,16 @@
   line-height: 16px;
   color: #444444;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.item-show-more__button {
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+  }
 }
