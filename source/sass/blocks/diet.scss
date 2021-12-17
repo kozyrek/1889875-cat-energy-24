@@ -28,6 +28,7 @@
 
 .diet__item {
   padding: 30px 33px 18px 20px;
+  background-repeat: no-repeat;
   background-color: #f2f2f2;
   position: relative;
 
@@ -72,6 +73,58 @@
   }
 }
 
+.diet__item--slim::after {
+  position: absolute;
+  content: url("../img/icon/icon-cat-slim.svg");
+  width: 26px;
+  height: 50px;
+  top: 21px;
+  left: 29px;
+
+  @media (min-width: $tablet-width) {
+    content: url("../img/icon/icon-cat-slim-tablet.svg");
+    width: 140px;
+    height: 194px;
+    top: 81px;
+    left: auto;
+    right: 92px;
+  }
+
+  @media (min-width: $desktop-width) {
+    content: url("../img/icon/icon-cat-slim-desktop.svg");
+    width: 70px;
+    height: 97px;
+    top: 41px;
+    left: 67px;
+  }
+}
+
+.diet__item--pro::after {
+  position: absolute;
+  content: url("../img/icon/icon-cat-pro.svg");
+  width: 67px;
+  height: 29px;
+  top: 35px;
+  left: 13px;
+
+  @media (min-width: $tablet-width) {
+    content: url("../img/icon/icon-cat-pro-tablet.svg");
+    width: 268px;
+    height: 112px;
+    top: 135px;
+    left: auto;
+    right: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    content: url("../img/icon/icon-cat-pro-desktop.svg");
+    width: 134px;
+    height: 56px;
+    top: 67px;
+    left: 33px;
+  }
+}
+
 .diet__title {
   margin: 0 9px 29px 71px;
   font-weight: 400;
@@ -104,15 +157,48 @@
 
 .diet__link {
   display: block;
-  padding: 4px 0;
+  width: 134px;
+  padding: 4px 47px 4px 0;
+  background-image: url("../img/background/icon-polygon.svg");
+  background-repeat: no-repeat;
+  background-position: 117px 6px;
   font-size: 16px;
   line-height: 16px;
   color: #000000;
   text-transform: uppercase;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 2px;
+    top: 11px;
+    left: 100px;
+    background-color: #000000;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
+    padding: 4px 57px 4px 0;
+    width: 165px;
+    background-position: 146px 13px;
     font-size: 20px;
     line-height: 30px;
+
+    &::before {
+      top: 18px;
+      left: 131px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 4px 60px 4px 0;
+    width: 168px;
+    background-position: 151px 13px;
+
+    &::before {
+      left: 136px;
+    }
   }
 }

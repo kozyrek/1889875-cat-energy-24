@@ -56,13 +56,17 @@
   }
 }
 
+.contacts__text--address {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
 .contacts__map {
   iframe {
     display: block;
     border: none;
-
-    @media (min-width: $tablet-width) {
-      height: 400px;
-    }
+    width: 100%;
   }
 }

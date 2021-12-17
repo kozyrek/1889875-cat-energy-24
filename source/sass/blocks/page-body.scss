@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: $desktop-width;
+    width: $desktop-width;
   }
 }
 // класс для реализации работы меню без использования js
