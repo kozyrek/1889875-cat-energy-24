@@ -2,7 +2,7 @@
   margin-bottom: 49px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 47px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,20 +23,22 @@
   row-gap: 20px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 250px 250px;
-    gap: 36px 134px;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 60px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
-    gap: 76px;
+    gap: 80px;
   }
 }
 
 .article__item {
-  padding: 2px 0 0 80px;
+  padding: 0 0 0 80px;
   min-height: 60px;
   position: relative;
+  display: flex;
+  align-items: center;
 
   &::before {
     position: absolute;
@@ -45,11 +47,30 @@
     height: 60px;
     top: 0;
     left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: $green;
   }
 
   @media (min-width: $tablet-width) {
-    padding: 152px 0 57px 0;
+    padding: 152px 70px 57px 0;
+    align-items: flex-start;
+
+    &::after {
+      position: absolute;
+      width: 134px;
+      height: 280px;
+      top: 0;
+      font-family: "Oswald", "Arial Narrow", sans-serif;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 152px 0 57px;
   }
 }
 
@@ -59,4 +80,86 @@
     height: 80px;
     top: 40px;
   }
+}
+
+.article__item--leaf {
+  &::before {
+    background-image: url("../img/background/icon-leaf.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "1";
+      right: 72px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      left: 118px;
+    }
+  }
+}
+
+.article__item--tub {
+  &::before {
+    background-image: url("../img/background/icon-tub.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "2";
+      right: 79px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      left: 111px;
+    }
+  }
+}
+
+.article__item--eat {
+  &::before {
+    background-image: url("../img/background/icon-eat.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "3";
+      right: 77px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      left: 113px;
+    }
+  }
+}
+
+.article__item--alarm {
+  &::before {
+    background-image: url("../img/background/icon-alarm.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "4";
+      right: 77px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      left: 113px;
+    }
+  }
+}
+
+.article__text {//добавила тег р для выравнивания по вертикали и размещения на переднем от цифры плане//
+  margin: 0;
+  position: relative;
+  z-index: 2;
 }

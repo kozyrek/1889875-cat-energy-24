@@ -4,6 +4,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 43px 30px 55px;
+    border-top: 1px solid #e6e6e6;
     position: relative;
 
     &::before {
@@ -58,7 +59,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 60px;
+    margin: 0 0 59px;
   }
 }
 
@@ -92,7 +93,7 @@
   margin: 0 0 40px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 63px;
+    margin: 0 0 64px;
   }
 
   @media (min-width: $desktop-width) {
@@ -176,13 +177,26 @@
     line-height: 20px;
     text-align: right;
     position: absolute;
-    bottom: 12px;
-    right: 0;
+    bottom: 11px;
+    right: 1px;
     z-index: 1;
   }
 
   @media (min-width: $desktop-width) {
     position: static;
-    max-width: 327px;
+    min-width: 350px;
+    text-align: left;
+  }
+}
+
+.example__text-recap--price {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    margin: 0 0 0 59px;
   }
 }
