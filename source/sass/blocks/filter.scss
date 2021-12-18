@@ -69,10 +69,32 @@
 .filter__program-diet {
   padding-top: 22px;
   padding-bottom: 19px;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    top: -1px;
+    left: -20px;
+    right: -20px;
+    background-color: #d9d9d9;
+  }
+
+  &::after {
+    top: auto;
+    bottom: -1px;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 24px 27px;
     border: 1px solid #e7e7e7;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -148,13 +170,53 @@
 
 .filter__user-contacts {
   margin-bottom: 23.6px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: -71px;
+    left: 201px;
+    right: -20px;
+    background-color: $green;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
+
+    br {
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 31px;
+      height: 2px;
+      top: -90px;
+      left: -70px;
+      background-color: $green;
+    }
+
+    &::after {
+      top: -90px;
+      left: 553px;
+      right: -70px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 67px;
+
+    &::before {
+      width: 70px;
+      left: -110px;
+    }
+
+    &::after {
+      right: -110px;
+    }
   }
 }
 
@@ -247,13 +309,49 @@
 
 .filter__comment {
   margin-bottom: 17.8px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: -48px;
+    left: 143px;
+    right: -20px;
+    background-color: $green;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 61px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      top: -90px;
+      left: -70px;
+      background-color: $green;
+    }
+
+    &::after {
+      top: -90px;
+      left: 219px;
+      right: -70px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 64px;
+
+    &::before {
+      width: 70px;
+      left: -110px;
+    }
+
+    &::after {
+      right: -110px;
+    }
   }
 }
 
@@ -284,13 +382,49 @@
 
 .filter__other-products {
   margin-bottom: 35px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: -45px;
+    left: 164px;
+    right: -20px;
+    background-color: $green;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 53px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 2px;
+      top: -71px;
+      left: -70px;
+      background-color: $green;
+    }
+
+    &::after {
+      top: -71px;
+      left: 252px;
+      right: -70px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 61px;
+
+    &::before {
+      width: 70px;
+      left: -110px;
+    }
+
+    &::after {
+      right: -110px;
+    }
   }
 }
 
@@ -359,6 +493,14 @@
   top: 8px;
   left: 6.3px;
   background-image: url("../img/background/icon-tick.svg");
+
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 18.7px;
+    top: 11px;
+    left: 8px;
+    background-image: url("../img/background/icon-tick-large.svg");
+  }
 }
 
 .filter__button {
