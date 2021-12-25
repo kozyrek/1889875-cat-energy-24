@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/16.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page-body">
     <header class="page-header page-header--back">
       <div class="page-header__container wrapper">
-        <div class="page-header__logo-wrapper">
-          <a class="page-header__logo">
-            <img src="img/logo/logo-image.svg" width="33" height="37" alt="Логотип магазина функционального питания Кэт энерджи">
-          </a>
-          <a class="page-header__logo">
-            <img src="img/logo/logo-text.svg" width="101" height="18" alt="Логотип магазина функционального питания Кэт энерджи">
-          </a>
-        </div>
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/header-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo/header-logo-tablet.svg">
+            <img src="img/logo/header-logo-mobile.svg" width="191" height="38" alt="Логотип магазина функционального питания Кэт энерджи">
+          </picture>
+        </a>
         <nav class="page-header__navigation main-nav">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
@@ -41,7 +44,11 @@
           <a class="promo__link button button--size" href="form.html">Подобрать программу</a>
         </div>
         <div class="promo__container">
-          <img class="promo__image" src="img/promo-image.png" width="280" height="270" alt="Баночка с питанием для кошек">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/promo-image-desktop.png 1x, img/promo-image-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/promo-image-tablet.png 1x, img/promo-image-tablet@2x.png 2x">
+            <img class="promo__image" src="img/promo-image-mobile.png" srcset="img/promo-image-mobile@2x.png 2x" width="280" height="270" alt="Баночка с питанием для кошек">
+          </picture>
         </div>
       </section>
     </header>
@@ -99,10 +106,16 @@
         <div class="example__slider box-slider">
           <ul class="box-slider__list list-reset">
             <li class="box-slider__item box-slider__item-before">
-              <img class="box-slider__image" src="img/cat-before.png" width="280" height="232" alt="Фотография кота с избыточным весом до применения функционального питания.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x">
+                <img class="box-slider__image" src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png 2x" width="280" height="232" alt="Фотография кота с избыточным весом до применения функционального питания.">
+              </picture>
             </li>
             <li class="box-slider__item box-slider__item-after">
-              <img class="box-slider__image" src="img/cat-after.png" width="243" height="232" alt="Фотография кота после применения функционального питания.">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x">
+                <img class="box-slider__image" src="img/cat-after-mobile.png" srcset="img/cat-after-mobile@2x.png 2x" width="243" height="232" alt="Фотография кота после применения функционального питания.">
+              </picture>
             </li>
           </ul>
           <div class="box-slider__slider slider">
