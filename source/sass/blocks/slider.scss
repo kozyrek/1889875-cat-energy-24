@@ -18,5 +18,13 @@
     line-height: 30px;
     text-decoration: underline dotted rgba(0, 0, 0, 0.24) 1px;
     text-underline-offset: 6px;
+
+    &:hover {
+      text-decoration: underline solid rgba(0, 0, 0, 0.4) 1px;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
   }
 }

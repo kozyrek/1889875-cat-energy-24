@@ -45,7 +45,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 77px 316px 53px 52px;
+    padding: 78px 316px 53px 52px;
     display: flex;
     flex-direction: column;
   }
@@ -177,6 +177,22 @@
     top: 11px;
     left: 100px;
     background-color: #000000;
+  }
+
+  &:hover::before {
+    width: 26px;
+  }
+
+  &:hover {
+    background-position: 125px 6px;
+
+    @media (min-width: $tablet-width) {
+      background-position: 157px 13.5px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet-width) {

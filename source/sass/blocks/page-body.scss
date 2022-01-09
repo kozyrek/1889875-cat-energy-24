@@ -22,28 +22,70 @@
 .page-body--no-js {
   .page-header__container {
     flex-direction: column;
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 24px 30px 47.3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 53px 110px 26px;
+    }
   }
 
   .page-header--container {
     flex-direction: column;
+    border-bottom: none;
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      padding: 25px 30px 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 54px 110px 48px;
+    }
+  }
+
+  .page-header__logo {
+    padding: 12px 20px 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
+
+    img {
+      margin-left: 0;
+
+      @media (min-width: $tablet-width) {
+        margin: 0;
+      }
+    }
   }
 
   .main-nav {
-    padding-top: 10px;
+    padding-top: 15px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
   }
 
   .main-nav__list {
     position: static;
-    min-width: 280px;
+    min-width: 320px;
     background-color: $white;
     z-index: 0;
     display: block;
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+      display: flex;
+    }
   }
 
   .main-nav__toggle {
-    position: absolute;
-    top: 15px;
-    right: 18px;
-    background-image: url("../img/background/icon-close.svg");
+    display: none;
   }
 }

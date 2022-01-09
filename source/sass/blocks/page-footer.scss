@@ -8,33 +8,12 @@
   flex-direction: column;
   align-items: center;
   background-color: #f2f2f2;
-  position: relative;
-
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    top: 95px;
-    left: 20px;
-    right: 20px;
-    height: 1px;
-    background-color: #d9d9d9;
-  }
-
-  &::after {
-    top: 158px;
-  }
 
   @media (min-width: $tablet-width) {
     padding: 58px 30px 55px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    &::before,
-    &::after {
-      display: none;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -65,19 +44,83 @@
 .page-footer__social-list {
   display: grid;
   grid-template-columns: repeat(3, 23px);
-  gap: 30.5px;
-  margin-bottom: 45px;
+  gap: 34px;
+  margin-bottom: 46px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    margin: 0 0 0 16px;
+    grid-template-columns: 30px 23px 15px;
+    gap: 27px;
+  }
+}
+
+.page-footer__social-item {
+  display: flex;
+  align-items: center;
+}
+
+.page-footer__social-link-icon {
+  &:hover {
+    fill: $green;
+  }
+
+  &--facebook:hover {
+    fill: none;
+    stroke: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--vk {
+      width: 30px;
+      height: 22px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook {
+      width: 15px;
+      height: 29px;
+    }
   }
 }
 
 .page-footer__logo {
   margin-bottom: 52px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 55px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    width: auto;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -86,13 +129,35 @@
   width: 100%;
   position: relative;
 
+  &::after {
+    position: absolute;
+    content: "";
+    top: -28px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d9d9d9;
+  }
+
+  &:hover .page-footer__htmlacademy-link-icon {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     width: 163px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
 .page-footer__htmlacademy-link-icon {
   position: absolute;
-  top: -8px;
+  top: -6px;
   right: 0;
 }

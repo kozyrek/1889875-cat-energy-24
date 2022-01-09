@@ -10,12 +10,12 @@
   margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
-    row-gap: 72px;
+    row-gap: 73px;
     margin-bottom: 75px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 69px;
+    margin-bottom: 71px;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
@@ -37,13 +37,15 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    gap: 21px;
+    gap: 19px;
+    padding-left: 2px;
   }
 }
 
 .filter__user-data-label {
   @include label();
   color: #444444;
+  display: flex;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -52,10 +54,25 @@
 }
 
 .filter__user-data-input {
-  padding: 12.5px 16px;
+  padding: 12.5px 10px 12.5px 16px;
   border: 1px solid #e7e7e7;
 
   @include input;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid #444444;
+    box-shadow: inset 0 0 0 1px #444444;
+    outline: none;
+  }
+
+  &--error {//класс ошибки назначается для обязательных полей формы, помеченных *//
+    border: 1px solid #ff8282;
+    box-shadow: inset 0 0 0 1px #ff8282;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -86,7 +103,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 24px 27px;
+    padding: 25px 29px 23px;
     border: 1px solid #e7e7e7;
 
     &::before,
@@ -148,21 +165,36 @@
   }
 }
 
-.filter__program-diet-input:checked + .filter__program-diet-label::after {
-  position: absolute;
-  content: "";
-  width: 13.5px;
-  height: 13.55px;
-  top: 8.23px;
-  left: 8.3px;
-  background-color: $green;
-  border-radius: 50%;
+.filter__program-diet-input {
+  &:checked + .filter__program-diet-label::after {
+    position: absolute;
+    content: "";
+    width: 13.5px;
+    height: 13.55px;
+    top: 8.23px;
+    left: 8.3px;
+    background-color: $green;
+    border-radius: 50%;
 
-  @media (min-width: $tablet-width) {
-    width: 18px;
-    height: 18px;
-    top: 11px;
-    left: 11px;
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+      top: 11px;
+      left: 11px;
+    }
+  }
+
+  &:hover + .filter__program-diet-label::before {
+    border: 1px solid #bababa;
+  }
+
+  &:focus + .filter__program-diet-label::before {
+    box-shadow: 0 0 0 1px #bababa;
+  }
+
+  &:disabled + .filter__program-diet-label,
+  &:disabled:checked + .filter__program-diet-label {
+    opacity: 0.3;
   }
 }
 
@@ -170,43 +202,54 @@
   margin-bottom: 23.6px;
   position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    top: -71px;
-    left: 201px;
-    right: -20px;
-    background-color: $green;
-  }
-
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
 
     br {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
+  }
+}
+
+.filter__user-contacts-title {
+  padding: 0;
+  margin-bottom: 35px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 16px;
+    left: 201px;
+    right: -20px;
+    background-color: $green;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
 
     &::before {
       position: absolute;
       content: "";
       width: 31px;
       height: 2px;
-      top: -90px;
+      top: 22px;
       left: -70px;
       background-color: $green;
     }
 
     &::after {
-      top: -90px;
+      top: 22px;
       left: 553px;
       right: -70px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 67px;
-
     &::before {
       width: 70px;
       left: -110px;
@@ -215,15 +258,6 @@
     &::after {
       right: -110px;
     }
-  }
-}
-
-.filter__user-contacts-title {
-  padding: 0;
-  margin-bottom: 35px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 76px;
   }
 }
 
@@ -242,14 +276,15 @@
 }
 
 .filter__user-contacts-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
   position: relative;
 }
 
 .filter__user-contacts-label {
   @include label();
+
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
 
   color: #444444;
 
@@ -263,20 +298,32 @@
   position: absolute;
   top: 16.8px;
   right: 16px;
+
+  @media (min-width: $tablet-width) {
+    top: 18px;
+  }
 }
 
 .filter__user-contacts-label-icon-tel {
   position: absolute;
   top: 13px;
   right: 13px;
+
+  @media (min-width: $tablet-width) {
+    top: 16px;
+  }
 }
 
 .filter__user-contacts-input[type="email"] {
   margin-left: 13px;
-  padding: 11.5px 15px 13.5px;
-  border: 1px solid #cdcdcd;
+  padding: 11.5px 37px 13.5px 14px;
+  border: 1px solid #e7e7e7;//сменила цвет границы на тот, что указан в стайлгайде//
 
   @include input();
+
+  &:focus ~ .filter__user-contacts-label-icon-email {
+    stroke: $green;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -288,10 +335,14 @@
 
 .filter__user-contacts-input[type="tel"] {
   margin-left: 10px;
-  padding: 11.5px 16px 13.5px;
-  border: 1px solid #cdcdcd;
+  padding: 11.5px 36px 13.5px 16px;
+  border: 1px solid #e7e7e7;//сменила цвет границы на тот, что указан в стайлгайде//
 
   @include input();
+
+  &:focus ~ .filter__user-contacts-label-icon-tel {
+    fill: $green;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -301,43 +352,79 @@
   }
 }
 
+.filter__user-contacts-input {
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid #444444;
+    box-shadow: inset 0 0 0 1px #444444;
+    outline: none;
+  }
+
+  &--error {//класс ошибки назначается для обязательных полей формы, помеченных *//
+    border: 1px solid #ff8282;
+    box-shadow: inset 0 0 0 1px #ff8282;
+  }
+}
+
+.filter__user-contacts-input--error[type="tel"] ~ .filter__user-contacts-label-icon-tel {//класс ошибки назначается для обязательных полей формы, помеченных *//
+  fill: #ff8282;
+}
+
+.filter__user-contacts-input--error[type="email"] ~ .filter__user-contacts-label-icon-email {//класс ошибки назначается для обязательных полей формы, помеченных *//
+  stroke: #ff8282;
+}
+
 .filter__comment {
   margin-bottom: 17.8px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 62px;
+  }
+}
+
+.filter__comment-title {
+  margin-bottom: 37.7px;
+  padding: 0;
 
   &::after {
     position: absolute;
     content: "";
     height: 2px;
-    top: -48px;
+    top: 16px;
     left: 143px;
     right: -20px;
     background-color: $green;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 61px;
+    margin-bottom: 76px;
 
     &::before {
       position: absolute;
       content: "";
       width: 30px;
       height: 2px;
-      top: -90px;
+      top: 22px;
       left: -70px;
       background-color: $green;
     }
 
     &::after {
-      top: -90px;
+      top: 22px;
       left: 219px;
       right: -70px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 64px;
-
     &::before {
       width: 70px;
       left: -110px;
@@ -346,15 +433,6 @@
     &::after {
       right: -110px;
     }
-  }
-}
-
-.filter__comment-title {
-  margin-bottom: 37.7px;
-  padding: 0;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 76px;
   }
 }
 
@@ -364,13 +442,23 @@
   resize: none;
   border: 1px solid #e7e7e7;
 
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid #444444;
+    box-shadow: inset 0 0 0 1px #444444;
+    outline: none;
+  }
+
   @media (min-width: $tablet-width) {
     height: 174px;
     padding-left: 19px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 12px 12px 14px 19px;
+    padding: 9px 12px 14px 19px;
   }
 }
 
@@ -378,39 +466,50 @@
   margin-bottom: 35px;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 61px;
+  }
+}
+
+.filter__other-products-title {
+  margin-bottom: 34px;
+  padding: 0;
+
   &::after {
     position: absolute;
     content: "";
     height: 2px;
-    top: -45px;
+    top: 16px;
     left: 164px;
     right: -20px;
     background-color: $green;
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 53px;
+    margin-bottom: 57px;
 
     &::before {
       position: absolute;
       content: "";
       width: 30px;
       height: 2px;
-      top: -71px;
+      top: 22px;
       left: -70px;
       background-color: $green;
     }
 
     &::after {
-      top: -71px;
+      top: 22px;
       left: 252px;
       right: -70px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 61px;
-
     &::before {
       width: 70px;
       left: -110px;
@@ -419,15 +518,6 @@
     &::after {
       right: -110px;
     }
-  }
-}
-
-.filter__other-products-title {
-  margin-bottom: 34px;
-  padding: 0;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 57px;
   }
 }
 
@@ -479,26 +569,41 @@
   }
 }
 
-.filter__other-products-input:checked + .filter__other-products-label::after {
-  position: absolute;
-  content: "";
-  width: 18px;
-  height: 14px;
-  top: 8px;
-  left: 6.3px;
-  background-image: url("../img/background/icon-tick.svg");
+.filter__other-products-input {
+  &:checked + .filter__other-products-label::after {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 14px;
+    top: 8px;
+    left: 6.3px;
+    background-image: url("../img/background/icon-tick.svg");
 
-  @media (min-width: $tablet-width) {
-    width: 24px;
-    height: 18.7px;
-    top: 11px;
-    left: 8px;
-    background-image: url("../img/background/icon-tick-large.svg");
+    @media (min-width: $tablet-width) {
+      width: 24px;
+      height: 18.7px;
+      top: 11px;
+      left: 8px;
+      background-image: url("../img/background/icon-tick-large.svg");
+    }
+  }
+
+  &:hover + .filter__other-products-label::before {
+    border: 1px solid #bababa;
+  }
+
+  &:focus + .filter__other-products-label::before {
+    box-shadow: 0 0 0 1px #bababa;
+  }
+
+  &:disabled + .filter__other-products-label,
+  &:disabled:checked + .filter__other-products-label {
+    opacity: 0.3;
   }
 }
 
 .filter__button {
-  margin-bottom: 17px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -507,7 +612,8 @@
 
 .filter__text {
   margin: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
     justify-self: flex-start;

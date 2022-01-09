@@ -3,30 +3,6 @@
   text-align: center;
   text-transform: uppercase;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 2px;
-    top: 39px;
-    left: calc(50% - 15px);
-    background-color: #d3d3d3;
-  }
-
-  &::after {
-    transform: rotate(90deg);
-  }
-
-  @media (min-width: $tablet-width) {
-    &::before,
-    &::after {
-      width: 60px;
-      top: 82px;
-      left: calc(50% - 30px);
-    }
-  }
-
   @media (min-width: $tablet-width) {
     margin: 0 0 23px;
   }
