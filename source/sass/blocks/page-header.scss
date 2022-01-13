@@ -55,19 +55,7 @@
 }
 
 .page-header__logo {
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
   @media (min-width: $tablet-width) {
-    img {
-      width: 100%;
-    }
-
     width: 174px;
     height: 52px;
   }
@@ -75,6 +63,22 @@
   @media (min-width: $desktop-width) {
     width: 202px;
     height: 60px;
+  }
+
+  &:hover[href] {
+    opacity: 0.8;
+  }
+
+  &:active[href] {
+    opacity: 0.6;
+  }
+
+  img {
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
   }
 }
 

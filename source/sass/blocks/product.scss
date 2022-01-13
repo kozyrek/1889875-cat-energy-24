@@ -1,6 +1,19 @@
 .product__list {
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 141px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 141px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 143px 80px;
+  }
+
   &::before,
   &::after {
     position: absolute;
@@ -10,35 +23,39 @@
     left: -20px;
     right: -20px;
     background-color: #ebebeb;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &::after {
     top: auto;
     bottom: 0;
   }
-
-  @media (min-width: $tablet-width) {
-    padding-top: 140px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 141px 60px;
-
-    &::before,
-    &::after {
-      display: none;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 141px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 143px 80px;
-  }
 }
 
 .product__item {
   padding: 19px 0 25px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    min-height: 430px;
+    padding: 161px 37px 39px 39px;
+    position: relative;
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) {
+      align-items: center;
+      padding: 161px 38px 38px;
+      background-color: transparent;
+      border: 2px solid #f2f2f2;
+    }
+  }
 
   &:not(:last-child)::before {
     position: absolute;
@@ -48,24 +65,8 @@
     left: -20px;
     right: -20px;
     background-color: #ebebeb;
-  }
 
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: column;
-    background-color: #f2f2f2;
-    min-height: 430px;
-    padding: 161px 37px 39px 39px;
-    position: relative;
-
-    &:last-child {
-      align-items: center;
-      padding: 161px 38px 38px;
-      background-color: transparent;
-      border: 2px solid #f2f2f2;
-    }
-
-    &:not(:last-child)::before {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
@@ -83,19 +84,16 @@
     top: 39px;
     left: calc(50% - 15px);
     background-color: #d3d3d3;
-  }
 
-  &::after {
-    transform: rotate(90deg);
-  }
-
-  @media (min-width: $tablet-width) {
-    &::before,
-    &::after {
+    @media (min-width: $tablet-width) {
       width: 60px;
       top: 82px;
       left: calc(50% - 30px);
     }
+  }
+
+  &::after {
+    transform: rotate(90deg);
   }
 }
 

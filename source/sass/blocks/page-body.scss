@@ -15,10 +15,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    max-width: $desktop-width;
   }
 }
-// класс для реализации работы меню без использования js
+// класс для реализации работы меню и карты без использования js
 .page-body--no-js {
   .page-header__container {
     flex-direction: column;
@@ -54,14 +54,6 @@
     @media (min-width: $tablet-width) {
       padding: 0;
     }
-
-    img {
-      margin-left: 0;
-
-      @media (min-width: $tablet-width) {
-        margin: 0;
-      }
-    }
   }
 
   .main-nav {
@@ -86,6 +78,42 @@
   }
 
   .main-nav__toggle {
+    display: none;
+  }
+
+  .contacts__map {
+    min-width: 320px;
+    height: 362px;
+    background-image: url("../img/map/location-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map/location-mobile@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      min-width: 768px;
+      height: 400px;
+      background-image: url("../img/map/location-tablet@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/map/location-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 1440px;
+      background-image: url("../img/map/location-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/map/location-desktop@2x.jpg");
+      }
+    }
+  }
+
+  .contacts__interactive-map {
     display: none;
   }
 }

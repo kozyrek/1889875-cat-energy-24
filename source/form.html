@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/16.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page-body"><!--при реализации работы меню без js на данный элемент вешается класс page-body--no-js-->
+  <body class="page-body page-body--no-js"><!--при реализации работы с js второй класс удаляется с данного элемента-->
     <header class="page-header page-header--container wrapper">
       <a class="page-header__logo" href="index.html">
         <picture>
@@ -78,7 +80,9 @@
             </fieldset>
           </div>
           <fieldset class="filter__user-contacts filter__fieldset">
-            <legend class="filter__user-contacts-title title title--form-size">Контактные данные<br>&nbsp;(владельца кота)</legend>
+            <legend class="filter__user-contacts-title title title--form-size">
+              <span>Контактные данные&nbsp;<br>(владельца кота)</span>
+            </legend>
             <ul class="filter__user-contacts-list list-reset">
               <li class="filter__user-contacts-item">
                 <label class="filter__user-contacts-label filter__user-contacts-label--email" for="email">E-mail:<sup>*</sup>
@@ -99,11 +103,15 @@
             </ul>
           </fieldset>
           <fieldset class="filter__comment filter__fieldset">
-            <legend class="filter__comment-title title title--form-size">Комментарий</legend>
-            <textarea class="filter__comment-text text text--area" name="comment" rows="7">Расскажите обо всех повадках кота</textarea>
+            <legend class="filter__comment-title title title--form-size">
+              <span>Комментарий</span>
+            </legend>
+            <textarea class="filter__comment-text text text--area" name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="filter__other-products filter__fieldset">
-            <legend class="filter__other-products-title title title--form-size">Дополнительно</legend>
+            <legend class="filter__other-products-title title title--form-size">
+              <span>Дополнительно</span>
+            </legend>
             <ul class="filter__other-products-list list-reset">
               <li class="filter__other-products-item">
                 <input class="visually-hidden filter__other-products-input" type="checkbox" name="sugar" id="sugar" checked>
@@ -134,11 +142,11 @@
       <section class="contacts contacts--back">
         <div class="contacts__address">
           <h2 class="contacts__title title title--size">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-          <p class="contacts__text text text--height">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="contacts__text--address">Санкт-Петербург</span></p>
+          <p class="contacts__text text text--height">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="contacts__text contacts__text--address">Санкт-Петербург</span></p>
         </div>
         <div class="contacts__map">
           <h2 class="visually-hidden">Как нас найти?</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4486.605730761653!2d30.322419730349278!3d59.93951432153494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638032517047!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" title="Магазин по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
+          <iframe class="contacts__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4486.605730761653!2d30.322419730349278!3d59.93951432153494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638032517047!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" title="Магазин по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
         </div>
       </section>
       <div class="page-footer__wrapper page-footer__wrapper--form">

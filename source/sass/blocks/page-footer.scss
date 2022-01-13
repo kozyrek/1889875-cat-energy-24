@@ -64,29 +64,31 @@
     fill: $green;
   }
 
-  &--facebook:hover {
-    fill: none;
-    stroke: $green;
-  }
-
   &:active {
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
-    &--vk {
+  &--facebook:hover {
+    fill: none;
+    stroke: $green;
+
+    @media (min-width: $tablet-width) {
+      width: 15px;
+      height: 29px;
+    }
+  }
+
+  &--vk {
+    @media (min-width: $tablet-width) {
       width: 30px;
       height: 22px;
     }
+  }
 
-    &--instagram {
+  &--instagram {
+    @media (min-width: $tablet-width) {
       width: 23px;
       height: 23px;
-    }
-
-    &--facebook {
-      width: 15px;
-      height: 29px;
     }
   }
 }
@@ -96,6 +98,19 @@
   width: 100%;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  &:hover[href] {
+    opacity: 0.8;
+  }
+
+  &:active[href] {
+    opacity: 0.6;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -104,21 +119,8 @@
     right: 0;
     height: 1px;
     background-color: #d9d9d9;
-  }
 
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-    width: auto;
-
-    &::after {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
@@ -129,6 +131,18 @@
   width: 100%;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    width: 163px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .page-footer__htmlacademy-link-icon {
+    fill: $green;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -137,20 +151,8 @@
     right: 0;
     height: 1px;
     background-color: #d9d9d9;
-  }
 
-  &:hover .page-footer__htmlacademy-link-icon {
-    fill: $green;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 163px;
-
-    &::after {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }

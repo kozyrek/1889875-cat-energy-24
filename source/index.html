@@ -4,16 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/16.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page-body"><!--при реализации работы меню без js на данный элемент вешается класс page-body--no-js-->
+  <body class="page-body page-body--no-js"><!--при реализации работы с js второй класс удаляется с данного элемента-->
     <header class="page-header page-header--back">
       <div class="page-header__container wrapper">
-        <a class="page-header__logo" href="index.html">
+        <a class="page-header__logo">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo/header-logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo/header-logo-tablet.svg">
@@ -94,17 +96,15 @@
         <div class="example__container">
           <h2 class="example__title title title--height">Живой пример</h2>
           <p class="example__text text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <dl class="example__list">
-            <div class="example__item">
-              <dt class="example__number">5 кг</dt>
-              <dd class="example__description">снижение веса</dd>
-            </div>
-            <div class="example__item">
-              <dt class="example__number">60 дней</dt>
-              <dd class="example__description">затрачено времени</dd>
-            </div>
-          </dl>
-          <p class="example__text-recap">Затраты на питание: <span class="example__text-recap--price">15 000 руб.</span></p>
+          <div class="example__box">
+            <dl class="example__list">
+                <dt class="example__number">5 кг</dt>
+                <dd class="example__description">снижение веса</dd>
+                <dt class="example__number">60 дней</dt>
+                <dd class="example__description">затрачено времени</dd>
+            </dl>
+            <p class="example__text-recap">Затраты на питание: <span class="example__text-recap example__text-recap--price">15 000 руб.</span></p>
+          </div>
         </div>
         <div class="example__slider box-slider">
           <ul class="box-slider__list list-reset">
@@ -141,11 +141,11 @@
       <section class="contacts">
         <div class="contacts__address">
           <h2 class="contacts__title title title--size">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-          <p class="contacts__text text text--height">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="contacts__text--address">Санкт-Петербург</span></p>
+          <p class="contacts__text text text--height">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span class="contacts__text contacts__text--address">Санкт-Петербург</span></p>
         </div>
         <div class="contacts__map">
           <h2 class="visually-hidden">Как нас найти?</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4486.605730761653!2d30.322419730349278!3d59.93951432153494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638032517047!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" title="Магазин по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
+          <iframe class="contacts__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4486.605730761653!2d30.322419730349278!3d59.93951432153494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638032517047!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" title="Магазин по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
         </div>
       </section>
       <div class="page-footer__wrapper">

@@ -2,34 +2,8 @@
   padding-top: 25px;
   position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    top: 40px;
-    left: 246px;
-    right: -20px;
-    background-color: $green;
-  }
-
   @media (min-width: $tablet-width) {
     padding-bottom: 76px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 2px;
-      top: 47px;
-      left: -30px;
-      background-color: $green;
-    }
-
-    &::after {
-      top: 47px;
-      left: 411px;
-      right: -30px;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -37,18 +11,6 @@
     display: grid;
     grid-template-columns: 1fr 245px;
     column-gap: 80px;
-
-    &::before {
-      width: 70px;
-      top: 48px;
-      left: -110px;
-    }
-
-    &::after {
-      top: 48px;
-      left: 373px;
-      right: -110px;
-    }
   }
 }
 
@@ -88,13 +50,13 @@
   }
 }
 
-.more-product__item:nth-child(2) .more-product__item--price {
+.more-product__item:nth-child(2) .more-product__text--price {
   @media (min-width: $tablet-width) {
     margin-left: 59px;
   }
 }
 
-.more-product__item--price {
+.more-product__text--price {
   @media (min-width: $desktop-width) {
     text-align: end;
   }
@@ -102,13 +64,52 @@
 
 .more-product__title {
   margin: 0 0 34px;
+  display: grid;
+  column-gap: 22px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 80px;
+    column-gap: 36px;
+    grid-template-columns: 0 auto 1fr;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
+    column-gap: 0;
+  }
+
+  &::after {
+    content: "";
+    height: 2px;
+    margin: 7px -20px 0 0;
+    background-color: $green;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      margin: 9px -30px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 10px -110px 0 35px;
+    }
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      width: 30px;
+      height: 2px;
+      margin: 9px 0 0 -30px;
+      background-color: $green;
+      position: relative;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 70px;
+      margin: 10px 0 0 -110px;
+    }
   }
 }
 
@@ -180,6 +181,25 @@
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-mobile@2x.jpg");
   }
 
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 71px 124px 69px 422px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 185px 43px 42px 41px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-desktop@2x.jpg");
+    }
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -199,25 +219,6 @@
     @media (min-width: $desktop-width) {
       top: 56px;
       left: calc(50% - 38px);
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    margin: 0;
-    padding: 71px 124px 69px 422px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-tablet.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-tablet@2x.jpg");
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 185px 43px 42px 41px;
-    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-desktop.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-bag-desktop@2x.jpg");
     }
   }
 }

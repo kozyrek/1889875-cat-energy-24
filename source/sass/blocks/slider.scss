@@ -18,12 +18,16 @@
     line-height: 30px;
     text-decoration: underline dotted rgba(0, 0, 0, 0.24) 1px;
     text-underline-offset: 6px;
+  }
 
-    &:hover {
+  &:hover {
+    @media (min-width: $tablet-width) {
       text-decoration: underline solid rgba(0, 0, 0, 0.4) 1px;
     }
+  }
 
-    &:active {
+  &:active {
+    @media (min-width: $tablet-width) {
       text-decoration: none;
     }
   }
