@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 26px;
+    margin-bottom: 25px;
   }
 }
 
@@ -14,7 +14,7 @@
   margin: 0 0 40px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 32px;
+    margin: 0 0 31px;
   }
 }
 
@@ -41,6 +41,15 @@
   display: flex;
   align-items: center;
 
+  @media (min-width: $tablet-width) {
+    padding: 152px 70px 57px 0;
+    align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 152px 0 57px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -51,13 +60,16 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: $green;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+    }
   }
 
-  @media (min-width: $tablet-width) {
-    padding: 152px 70px 57px 0;
-    align-items: flex-start;
-
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       position: absolute;
       width: 134px;
       height: 280px;
@@ -71,18 +83,6 @@
       content: counter(list1);
     }
   }
-
-  @media (min-width: $desktop-width) {
-    padding: 152px 0 57px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .article__item::before {
-    width: 80px;
-    height: 80px;
-    top: 40px;
-  }
 }
 
 .article__item--leaf {
@@ -90,14 +90,12 @@
     background-image: url("../img/background/icon-leaf.svg");
   }
 
-  @media (min-width: $tablet-width) {
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       right: 72px;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &::after {
+    @media (min-width: $desktop-width) {
       left: 118px;
     }
   }
@@ -108,14 +106,12 @@
     background-image: url("../img/background/icon-tub.svg");
   }
 
-  @media (min-width: $tablet-width) {
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       right: 79px;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &::after {
+    @media (min-width: $desktop-width) {
       left: 111px;
     }
   }
@@ -126,14 +122,12 @@
     background-image: url("../img/background/icon-eat.svg");
   }
 
-  @media (min-width: $tablet-width) {
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       right: 77px;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &::after {
+    @media (min-width: $desktop-width) {
       left: 113px;
     }
   }
@@ -144,14 +138,12 @@
     background-image: url("../img/background/icon-alarm.svg");
   }
 
-  @media (min-width: $tablet-width) {
-    &::after {
+  &::after {
+    @media (min-width: $tablet-width) {
       right: 77px;
     }
-  }
 
-  @media (min-width: $desktop-width) {
-    &::after {
+    @media (min-width: $desktop-width) {
       left: 113px;
     }
   }

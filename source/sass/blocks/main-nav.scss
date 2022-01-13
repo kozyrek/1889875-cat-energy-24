@@ -21,11 +21,15 @@
 
 .main-nav__toggle {
   width: 24px;
-  height: 17.5px;
+  height: 17px;
   background-color: transparent;
   border: none;
   cursor: pointer;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 
   &::before {
     position: absolute;
@@ -37,10 +41,6 @@
     right: 0;
     background-color: #000000;
     box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: none;
   }
 }
 
@@ -85,6 +85,7 @@
     background-color: transparent;
     display: flex;
     flex-wrap: wrap;
+    padding-top: 5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -96,7 +97,7 @@
   border-bottom: 1px solid #e6e6e6;
 
   @media (min-width: $tablet-width) {
-    margin-left: 34px;
+    margin-left: 36px;
     border-bottom: none;
   }
 }
@@ -112,6 +113,14 @@
 
   @media (min-width: $desktop-width) {
     color: #111111;
+  }
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
   }
 }
 

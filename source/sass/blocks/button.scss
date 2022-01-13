@@ -21,11 +21,29 @@
   @media (min-width: $desktop-width) {
     min-width: 168px;
   }
+
+  &:hover,
+  &:active {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: $white, $alpha: 0.3);
+  }
 }
 
 .button--all {
   color: #444444;
   background-color: #f2f2f2;
+
+  &:hover,
+  &:active {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba($color: #444444, $alpha: 0.3);
+  }
 }
 
 .button--size {

@@ -1,8 +1,13 @@
 .promo {
   position: relative;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
   }
 }
 
@@ -13,14 +18,18 @@
   background-size: contain;
   background-position: top;
 
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/cat-promo@2x.jpg"), linear-gradient(#4f4f53, #403f43);
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 0;
+    padding: 0 87px 0 88px;
     background-image: none;
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 82px;
+    padding: 82px 0 0;
   }
 }
 
@@ -78,11 +87,24 @@
   @media (min-width: $tablet-width) {
     margin-top: -83px;
     padding: 0;
+    width: 709px;
+    height: 609px;
+    align-self: center;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
     width: 552px;
     height: 499px;
+  }
+}
+
+.promo__image {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -46px;
   }
 }
