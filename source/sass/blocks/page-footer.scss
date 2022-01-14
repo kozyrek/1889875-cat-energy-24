@@ -59,19 +59,23 @@
   align-items: center;
 }
 
-.page-footer__social-link-icon {
-  &:hover {
+.page-footer__social-link {
+  &:hover .page-footer__social-link-icon {
     fill: $green;
   }
 
-  &:active {
-    opacity: 0.3;
-  }
-
-  &--facebook:hover {
+  &:hover .page-footer__social-link-icon--facebook {
     fill: none;
     stroke: $green;
+  }
 
+  &:active .page-footer__social-link-icon {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__social-link-icon {
+  &--facebook {
     @media (min-width: $tablet-width) {
       width: 15px;
       height: 29px;

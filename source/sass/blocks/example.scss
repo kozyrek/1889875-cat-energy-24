@@ -4,27 +4,17 @@
 
   @media (min-width: $tablet-width) {
     padding: 43px 30px 55px;
+    background: linear-gradient(to bottom, #ffffff 57.3%, #eaeaea 42.7%);
     border-top: 1px solid #e6e6e6;
     position: relative;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 95px 65px 110px;
+    background: linear-gradient(to bottom, #ffffff 28%, #f2f2f2 28%);
+    border-top: none;
     display: flex;
     justify-content: space-between;
-    background-color: #f2f2f2;
-  }
-
-  &::before {
-    @media (min-width: $tablet-width) {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      bottom: 462px;
-      right: 0;
-      background-color: $white;
-    }
   }
 }
 
