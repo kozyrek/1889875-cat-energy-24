@@ -10,14 +10,14 @@
   background-color: #f2f2f2;
 
   @media (min-width: $tablet-width) {
-    padding: 58px 30px 55px;
+    padding: 60px 30px 58px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 57px 110px 58px;
+    padding: 60px 110px 58px;
   }
 }
 
@@ -41,11 +41,25 @@
   }
 }
 
+.page-footer__wrapper-list {
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+}
+
 .page-footer__social-list {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 23px);
-  gap: 34px;
-  margin-bottom: 46px;
+  gap: 30px;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 0 16px;
@@ -54,24 +68,34 @@
   }
 }
 
-.page-footer__social-item {
+.page-footer__social-link {
   display: flex;
+  justify-content: center;
   align-items: center;
-}
+  width: 23px;
+  height: 16px;
 
-.page-footer__social-link-icon {
-  &:hover {
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+  }
+
+  &:hover .page-footer__social-link-icon {
     fill: $green;
   }
 
-  &:active {
-    opacity: 0.3;
-  }
-
-  &--facebook:hover {
+  &:hover .page-footer__social-link-icon--facebook {
     fill: none;
     stroke: $green;
+  }
 
+  &:active .page-footer__social-link-icon {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__social-link-icon {
+  &--facebook {
     @media (min-width: $tablet-width) {
       width: 15px;
       height: 29px;
@@ -94,7 +118,7 @@
 }
 
 .page-footer__logo {
-  margin-bottom: 52px;
+  margin-bottom: 31px;
   width: 100%;
   position: relative;
 
@@ -110,29 +134,17 @@
   &:active[href] {
     opacity: 0.6;
   }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: 55px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #d9d9d9;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
 }
 
 .page-footer__htmlacademy-link {
   display: block;
   width: 100%;
+  margin-top: 28px;
   position: relative;
 
   @media (min-width: $tablet-width) {
     width: 163px;
+    margin-top: 0;
   }
 
   &:active {
@@ -141,20 +153,6 @@
 
   &:hover .page-footer__htmlacademy-link-icon {
     fill: $green;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    top: -28px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: #d9d9d9;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
   }
 }
 
