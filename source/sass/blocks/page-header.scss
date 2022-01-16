@@ -27,7 +27,23 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 100%;
     padding: 54px 0 48px;
+  }
+}
+// класс для реализации работы меню без использования js
+.page-body--no-js .page-header--container {
+  flex-direction: column;
+  border-bottom: none;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    padding: 25px 30px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 54px 110px 48px;
   }
 }
 
@@ -45,6 +61,19 @@
   @media (min-width: $desktop-width) {
     padding: 53px 0 26px;
     grid-template-columns: 220px 1fr;
+  }
+}
+// класс для реализации работы меню без использования js
+.page-body--no-js .page-header__container {
+  flex-direction: column;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 30px 47.3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 53px 110px 26px;
   }
 }
 
@@ -81,6 +110,14 @@
     }
   }
 }
+// класс для реализации работы меню без использования js
+.page-body--no-js .page-header__logo {
+  padding: 12px 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
 
 .page-header__promo {
   padding-bottom: 10px;
@@ -90,6 +127,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 3px 190px 54px;
   }
 }

@@ -41,6 +41,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 414px;
     margin-bottom: 40px;
   }
 }

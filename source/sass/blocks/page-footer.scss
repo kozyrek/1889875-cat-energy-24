@@ -1,5 +1,9 @@
 .page-footer {
   margin-top: auto;
+
+  @media (min-width: $desktop-width) {
+    background-color: #f2f2f2;
+  }
 }
 
 .page-footer__wrapper {
@@ -17,6 +21,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 60px 110px 58px;
   }
 }

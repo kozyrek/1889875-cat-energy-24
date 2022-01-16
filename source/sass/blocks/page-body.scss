@@ -10,106 +10,11 @@
   color: #000000;
   background-color: #ffffff;
 
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+  }
+
   @media (min-width: $desktop-width) {
-    max-width: $desktop-width;
-  }
-}
-// класс для реализации работы меню и карты без использования js
-.page-body--no-js {
-  .page-header__container {
-    flex-direction: column;
-    padding: 0;
-
-    @media (min-width: $tablet-width) {
-      padding: 24px 30px 47.3px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding: 53px 110px 26px;
-    }
-  }
-
-  .page-header--container {
-    flex-direction: column;
-    border-bottom: none;
-    padding: 0;
-
-    @media (min-width: $tablet-width) {
-      flex-direction: row;
-      padding: 25px 30px 40px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding: 54px 110px 48px;
-    }
-  }
-
-  .page-header__logo {
-    padding: 12px 20px 0;
-
-    @media (min-width: $tablet-width) {
-      padding: 0;
-    }
-  }
-
-  .main-nav {
-    padding-top: 15px;
-
-    @media (min-width: $tablet-width) {
-      padding: 0;
-    }
-  }
-
-  .main-nav__list {
-    position: static;
-    min-width: 320px;
-    background-color: $white;
-    z-index: 0;
-    display: block;
-
-    @media (min-width: $tablet-width) {
-      background-color: transparent;
-      display: flex;
-    }
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .contacts__map {
-    width: 100%;
-    height: 362px;
-    background-image: url("../img/map/location-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/map/location-mobile@2x.jpg");
-    }
-
-    @media (min-width: $tablet-width) {
-      width: 100%;
-      height: 400px;
-      background-image: url("../img/map/location-tablet@1x.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/map/location-tablet@2x.jpg");
-      }
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 100%;
-      background-image: url("../img/map/location-desktop@1x.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/map/location-desktop@2x.jpg");
-      }
-    }
-  }
-
-  .contacts__interactive-map {
-    display: none;
+    min-width: $desktop-width;
   }
 }
