@@ -55,6 +55,7 @@
 
 .filter__user-data-input {
   @include input;
+  min-width: 170px;
   height: 45px;
   padding: 12.5px 10px 12.5px 16px;
   border: 1px solid #e7e7e7;

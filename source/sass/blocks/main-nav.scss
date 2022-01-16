@@ -18,6 +18,14 @@
     line-height: 30px;
   }
 }
+// класс для реализации работы меню без использования js
+.page-body--no-js .main-nav {
+  padding-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
 
 .main-nav__toggle {
   width: 24px;
@@ -42,6 +50,10 @@
     background-color: #000000;
     box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
   }
+}
+// класс для реализации работы меню без использования js
+.page-body--no-js .main-nav__toggle {
+  display: none;
 }
 
 .main-nav.active .main-nav__toggle {
@@ -90,6 +102,19 @@
 
   @media (min-width: $desktop-width) {
     max-width: 580px;
+  }
+}
+// класс для реализации работы меню без использования js
+.page-body--no-js .main-nav__list {
+  position: static;
+  min-width: 320px;
+  background-color: $white;
+  z-index: 0;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    display: flex;
   }
 }
 
