@@ -1,5 +1,5 @@
-if (document.querySelector('.page-body--no-js')) {
-  document.querySelector('.page-body--no-js').classList.remove('page-body--no-js');
+if (document.querySelector('.no-js')) {
+  document.querySelector('.no-js').classList.remove('no-js');
 };
 
 const menuElem = document.querySelector('.main-nav');
