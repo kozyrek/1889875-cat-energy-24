@@ -5,7 +5,7 @@
 
 ---
 
-permalink: /index.html
+permalink: source/index.html
 
 ---
 
